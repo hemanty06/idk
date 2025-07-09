@@ -32,12 +32,10 @@ export default function PelletDetail() {
 
   useEffect(() => {
     if (!pellet) return;
-    let prices = [];
-    if (selectedState === 'Average') {
-      prices = pellet.averageWeeklyPrices;
-    } else {
-      prices = pellet.stateWisePrices[selectedState] || [];
-    }
+    const prices = selectedState === 'Average'
+      ? pellet.averageWeeklyPrices
+      : pellet.stateWisePrices[selectedState] || [];
+
     setChartData(prices.map((price, i) => ({
       week: `Week ${i + 1}`,
       price,
@@ -58,10 +56,11 @@ export default function PelletDetail() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 40 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className="min-h-screen w-full bg-green-50 flex justify-center items-start"
+        className="min-h-screen w-full bg-green-50 block sm:flex sm:justify-center items-start"
       >
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 py-10">
-          {/* Banner */}
+        <div className="w-full sm:max-w-[1440px] mx-auto px-2 sm:px-8 py-6 sm:py-10">
+
+          {/* 🟩 Banner */}
           <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 mb-6">
             <div className="bg-white rounded-xl shadow-md py-8 sm:py-10 w-full">
               <Link
@@ -75,7 +74,8 @@ export default function PelletDetail() {
               </h1>
             </div>
           </div>
-          {/* Selector */}
+
+          {/* 🟩 State Selector */}
           <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:gap-8">
             <label className="block mb-2 sm:mb-0 text-green-700 font-semibold min-w-max">
               Select State:
@@ -90,9 +90,10 @@ export default function PelletDetail() {
               ))}
             </select>
           </div>
-          {/* 📈 Full-width chart outside the 1440px constraint */}
+
+          {/* 🟩 Responsive Chart Block */}
           <div className="w-full overflow-x-auto">
-            <div className="min-w-[1200px] h-[420px] px-6">
+            <div className="min-w-[600px] sm:min-w-[1000px] h-[320px] px-4">
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                   data={chartData}
@@ -111,7 +112,10 @@ export default function PelletDetail() {
                   <Tooltip
                     formatter={(value) => [`₹${value}`, 'Price']}
                     labelFormatter={(label) => label}
-                    contentStyle={{ background: '#f0fdf4', borderColor: '#22c55e' }}
+                    contentStyle={{
+                      background: '#f0fdf4',
+                      borderColor: '#22c55e'
+                    }}
                   />
                   <Legend />
                   <Line
@@ -121,12 +125,17 @@ export default function PelletDetail() {
                     strokeWidth={3}
                     dot={{ r: 5 }}
                     activeDot={{ r: 7 }}
-                    name={selectedState === 'Average' ? 'Average Price' : `${selectedState} Price`}
+                    name={
+                      selectedState === 'Average'
+                        ? 'Average Price'
+                        : `${selectedState} Price`
+                    }
                   />
                 </LineChart>
               </ResponsiveContainer>
             </div>
           </div>
+
         </div>
       </motion.div>
     </AnimatePresence>
