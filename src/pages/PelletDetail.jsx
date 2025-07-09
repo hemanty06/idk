@@ -14,7 +14,7 @@ export default function PelletDetail() {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
-    fetch('/data/pellets.json')
+    fetch(`${import.meta.env.BASE_URL}data/pellets.json`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch pellet data');
         return res.json();
