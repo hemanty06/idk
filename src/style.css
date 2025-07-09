@@ -103,3 +103,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  height: 10px;
+  background: rgba(224, 242, 241, 0.5); /* translucent track */
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent; /* hide the thumb */
+  border-radius: 8px;
+  border: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent rgba(224, 242, 241, 0.5);
+}

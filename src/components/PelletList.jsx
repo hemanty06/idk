@@ -34,7 +34,7 @@ export default function PelletList() {
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className="min-h-screen bg-green-50 pb-10"
     >
-      <header className="py-8 bg-white shadow mb-8">
+      <header className="py-8 bg-white shadow mb-8 mt-8">
         <h1 className="text-3xl font-bold text-green-800 text-center">Biomass Pellet Market Dashboard</h1>
         <p className="text-green-700 text-center mt-2">Weekly price trends for alternative fuel sources across India</p>
       </header>

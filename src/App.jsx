@@ -4,6 +4,7 @@ import PelletList from './components/PelletList.jsx';
 import PelletDetail from './pages/PelletDetail.jsx';
 import Landing from './pages/Landing.jsx';
 import { AnimatePresence } from 'framer-motion';
+import Header from './components/Header.jsx';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
+      <Header />
       <AnimatedRoutes />
     </BrowserRouter>
   );

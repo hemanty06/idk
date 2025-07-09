@@ -58,14 +58,14 @@ export default function PelletDetail() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 40 }}
         transition={{ duration: 0.4, ease: 'easeInOut' }}
-        className="min-h-screen w-full bg-green-50 overflow-x-auto flex justify-center items-start"
+        className="min-h-screen w-full bg-green-50 flex justify-center items-start"
       >
         <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-8 py-10">
           {/* Banner */}
           <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 mb-6">
             <div className="bg-white rounded-xl shadow-md py-8 sm:py-10 w-full">
               <Link
-                to="/"
+                to="/dashboard"
                 className="text-green-700 hover:underline text-lg font-semibold block mb-2 text-center"
               >
                 ← Back to list

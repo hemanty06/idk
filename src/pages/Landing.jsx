@@ -17,31 +17,31 @@ export default function Landing() {
         >
           Explore Pellet Prices
         </button>
+        {/* How It Works */}
+        <section className="w-full max-w-4xl mx-auto px-4 py-10">
+          <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">How It Works</h2>
+          <div className="flex flex-col sm:flex-row justify-center gap-8">
+            <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
+              <span className="text-3xl mb-2 text-green-700 font-bold">1</span>
+              <p className="text-green-800 font-semibold mb-1">Select a Pellet</p>
+              <p className="text-green-700 text-sm">Browse a variety of sustainable biomass pellets.</p>
+            </div>
+            <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
+              <span className="text-3xl mb-2 text-green-700 font-bold">2</span>
+              <p className="text-green-800 font-semibold mb-1">View Price Trends</p>
+              <p className="text-green-700 text-sm">See weekly price trends and market insights.</p>
+            </div>
+            <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
+              <span className="text-3xl mb-2 text-green-700 font-bold">3</span>
+              <p className="text-green-800 font-semibold mb-1">Filter by State</p>
+              <p className="text-green-700 text-sm">Compare prices across Indian states.</p>
+            </div>
+          </div>
+        </section>
         {/* Mock Graph Preview */}
         <div className="w-full max-w-xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col items-center mb-12">
           <div className="w-full h-48 bg-gradient-to-r from-green-200 to-green-400 rounded-lg flex items-center justify-center">
             <span className="text-green-900 text-xl font-semibold opacity-60">[Interactive Price Graph Preview]</span>
-          </div>
-        </div>
-      </section>
-      {/* How It Works */}
-      <section className="w-full max-w-4xl mx-auto px-4 py-10">
-        <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">How It Works</h2>
-        <div className="flex flex-col sm:flex-row justify-center gap-8">
-          <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-green-700 font-bold">1</span>
-            <p className="text-green-800 font-semibold mb-1">Select a Pellet</p>
-            <p className="text-green-700 text-sm">Browse a variety of sustainable biomass pellets.</p>
-          </div>
-          <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-green-700 font-bold">2</span>
-            <p className="text-green-800 font-semibold mb-1">View Price Trends</p>
-            <p className="text-green-700 text-sm">See weekly price trends and market insights.</p>
-          </div>
-          <div className="flex-1 bg-white rounded-lg shadow p-6 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-green-700 font-bold">3</span>
-            <p className="text-green-800 font-semibold mb-1">Filter by State</p>
-            <p className="text-green-700 text-sm">Compare prices across Indian states.</p>
           </div>
         </div>
       </section>
